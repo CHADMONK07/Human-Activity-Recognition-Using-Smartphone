@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Model files
+*.pkl
+*.h5
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large datasets
+data/raw/
