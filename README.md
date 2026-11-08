@@ -280,7 +280,178 @@ python src/predict.py
 
 
 ---
+---
 
+## 🤖 Machine Learning Models
+
+This project uses multiple supervised machine learning classification algorithms to recognize human activities from smartphone sensor data.
+
+The following models were trained and evaluated:
+
+---
+
+## 1. Logistic Regression
+
+Logistic Regression is a statistical classification algorithm used for predicting the probability of different classes.
+
+In this project, it is used as a baseline model to understand how effectively linear decision boundaries can classify human activities.
+
+**Advantages:**
+
+- Simple and computationally efficient
+- Easy to interpret
+- Provides a strong baseline performance
+
+---
+
+## 2. Random Forest
+
+Random Forest is an ensemble learning algorithm that combines multiple decision trees to improve classification performance.
+
+It works by creating multiple decision trees and combining their predictions to produce a more accurate and stable result.
+
+**Advantages:**
+
+- Handles complex feature relationships
+- Reduces overfitting compared to individual decision trees
+- Works well with high-dimensional datasets
+
+---
+
+## 3. Support Vector Machine (SVM)
+
+Support Vector Machine is a powerful supervised learning algorithm that finds the optimal decision boundary between different classes.
+
+SVM is particularly effective for high-dimensional datasets like HAR, where hundreds of sensor features are used.
+
+**Advantages:**
+
+- Performs well with many features
+- Creates effective classification boundaries
+- Provides high accuracy for complex classification problems
+
+---
+
+## Model Comparison Approach
+
+All models were trained using the same training dataset and evaluated on the same testing dataset.
+
+The models were compared using:
+
+- Accuracy Score
+- Classification Report
+- Confusion Matrix
+
+The best-performing model was selected for the final prediction pipeline.
+
+---
+## 🏋️ Model Training Process
+
+The model training pipeline follows these steps:
+
+### 1. Data Input
+
+The preprocessed sensor dataset is provided as input to the machine learning models.
+
+### 2. Model Training
+
+Three classification algorithms are trained:
+
+Logistic Regression
+Random Forest
+Support Vector Machine
+
+
+### 3. Model Evaluation
+
+Each model is evaluated using test data to measure its ability to correctly classify human activities.
+
+### 4. Best Model Selection
+
+The model with the highest performance is selected and saved for future predictions.
+
+The trained models are stored inside the `models/` directory.
+
+---
+---
+
+## 📈 Model Performance Results
+
+After training and evaluating multiple machine learning algorithms, their performance was compared using accuracy scores.
+
+### Accuracy Comparison
+
+| Model | Accuracy |
+|-------|----------|
+| Logistic Regression | 96.06% |
+| Random Forest | 92.57% |
+| Support Vector Machine (SVM) | 96.40% |
+
+---
+
+## 🏆 Best Performing Model
+
+Based on evaluation results, **Support Vector Machine (SVM)** achieved the highest accuracy of **96.40%** among all tested models.
+
+The SVM model was selected as the final model for the prediction pipeline because it provided the best performance on this high-dimensional sensor dataset containing 561 features.
+
+---
+
+## Evaluation Metrics
+
+The models were evaluated using:
+
+### Accuracy
+
+Measures the overall percentage of correctly classified activities.
+
+### Classification Report
+
+Provides detailed performance information including:
+
+- Precision
+- Recall
+- F1-score
+
+### Confusion Matrix
+
+Shows the relationship between actual and predicted activity classes, helping identify classification errors.
+
+---
+
+## 📊 Confusion Matrix Analysis
+
+A confusion matrix was generated for each machine learning model to analyze the classification performance across different human activities.
+
+The confusion matrix helps identify:
+
+- Correctly classified activity samples
+- Incorrect predictions between activity classes
+- Class-wise model performance
+
+The model performance was analyzed for all six activities:
+
+| Class | Activity |
+|-------|----------|
+| 1 | Walking |
+| 2 | Walking Upstairs |
+| 3 | Walking Downstairs |
+| 4 | Sitting |
+| 5 | Standing |
+| 6 | Laying |
+
+The confusion matrices provide insights into which activities are easier or more difficult for the models to distinguish.
+
+For example, activities involving similar body movements, such as:
+
+- Walking and Walking Upstairs
+- Sitting and Standing
+
+may have higher chances of misclassification compared to activities with clearly different movement patterns.
+
+The generated confusion matrix visualizations are stored in the `outputs/` directory.
+
+---
 ## Contributors
 
 - AMAAN - Data preprocessing and EDA
