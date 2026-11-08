@@ -1,4 +1,4 @@
 Model,Accuracy
-Support Vector Machine,0.9640312181879878
+SVM,0.9640312181879878
 Logistic Regression,0.9606379368849678
 Random Forest,0.9256871394638616
