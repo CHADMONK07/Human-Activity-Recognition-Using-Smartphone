@@ -1,14 +1,18 @@
 import pickle
 import numpy as np
+import pandas as pd
+
+from data_loader import load_data
 
 
-# Load best model
+# Load trained model
 
 with open(
     "models/best_model.pkl",
     "rb"
 ) as file:
     model = pickle.load(file)
+
 
 
 # Activity labels
@@ -23,27 +27,41 @@ activity_labels = {
 }
 
 
+
 def predict_activity(sensor_data):
 
-    prediction = model.predict(
-        np.array(sensor_data).reshape(1,-1)
+    # Get training data structure
+
+    x_train, x_test, y_train, y_test = load_data()
+
+
+    # Use same column names as training
+
+    input_data = pd.DataFrame(
+        [sensor_data],
+        columns=x_train.columns
     )
 
-    activity = activity_labels[
-        prediction[0]
-    ]
 
-    return activity
-
+    prediction = model.predict(
+        input_data
+    )
 
 
-# Example prediction
+    return activity_labels[prediction[0]]
+
+
 
 if __name__ == "__main__":
 
+
+    # Dummy 561 feature input
+
     sample = np.zeros(561)
 
+
     result = predict_activity(sample)
+
 
     print(
         "Predicted Activity:",
