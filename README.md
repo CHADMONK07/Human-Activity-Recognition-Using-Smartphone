@@ -1,9 +1,12 @@
 # Human Activity Recognition Using Smartphone Sensors
-# Human Activity Recognition Using Smartphone Sensors
+
+A Machine Learning based system that recognizes human activities using smartphone sensor data.
 
 <p align="center">
 
-A Machine Learning based system that recognizes human activities using smartphone sensor data.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Status](https://img.shields.io/badge/Project-Completed-success)
 
 </p>
 
@@ -108,7 +111,26 @@ These engineered features help machine learning algorithms identify unique patte
 ## 🔄 Project Workflow
 
 The complete workflow of the Human Activity Recognition system is shown below:
-
+```text
+Smartphone Sensor Data
+          |
+          ↓
+Data Loading
+          |
+          ↓
+Data Preprocessing
+          |
+          ↓
+Feature Processing
+          |
+          ↓
+Model Training
+          |
+          ↓
+Model Evaluation
+          |
+          ↓
+Human Activity Prediction
 ---
 
 ## 🏗️ Machine Learning Pipeline
@@ -194,7 +216,12 @@ Follow the steps below to run this project locally.
 ```bash
 git clone https://github.com/CHADMONK07/Human-Activity-Recognition-Using-Smartphone.git
 
+cd Human-Activity-Recognition-Using-Smartphone
+
 pip install -r requirements.txt
+```
+
+---
 
 ## 🧹 Data Preprocessing
 
@@ -222,61 +249,6 @@ Before training the machine learning models, the raw dataset is prepared through
 - The processed data is used as input for classification models.
 - Training data is used for learning patterns.
 - Testing data is used for evaluating model performance.
-
----
-
-#MACHINE LEARNING MODELS
-The following models were trained:
-
-1. Logistic Regression
-2. Random Forest
-3. Support Vector Machine (SVM)
-
----
-
-## Results
-
-| Model | Accuracy |
-|------|----------|
-| SVM | 96.40% |
-| Logistic Regression | 96.06% |
-| Random Forest | 92.57% |
-
-Best Model:
-
-Support Vector Machine
-
----
-
-## Project Structure
-data/
-models/
-notebooks/
-outputs/
-src/
-
----
-
-## Installation
-
-Install dependencies:
-pip install -r requirements.txt
-
-
----
-
-## Running the Project
-
-Train models:
-python src/train_model.py
-
-
-Evaluate models:
-python src/evaluate_model.py
-
-
-Predict activity:
-python src/predict.py
 
 
 ---
@@ -452,9 +424,129 @@ may have higher chances of misclassification compared to activities with clearly
 The generated confusion matrix visualizations are stored in the `outputs/` directory.
 
 ---
-## Contributors
+---
 
-- AMAAN - Data preprocessing and EDA
-- JAI - Model training
-- ATULYA - Model evaluation
-- THANISH - Prediction pipeline and documentation
+## 🔮 Prediction Demo
+
+The trained model can be used to predict human activities from new smartphone sensor data.
+
+The prediction pipeline:
+```text
+Sensor Input Data
+        |
+        ↓
+Data Formatting
+        |
+        ↓
+Best Trained Model
+        |
+        ↓
+Predicted Activity
+```
+
+
+The prediction script loads the saved best-performing model and generates activity predictions.
+
+### Running Prediction
+
+Execute:
+
+```bash
+python src/predict.py
+```
+
+---
+
+## ▶️ How to Run the Project
+
+Follow these steps to execute the complete machine learning pipeline.
+
+### Step 1: Activate Environment
+
+```bash
+venv\Scripts\activate
+```
+
+### Step 2: Train Models
+
+```bash
+python src/train_model.py
+```
+
+### Step 3: Evaluate Models
+
+```bash
+python src/evaluate_model.py
+```
+
+### Step 4: Predict Activity
+
+```bash
+python src/predict.py
+```
+---
+
+---
+
+## 📸 Results Visualization
+
+The project generates different evaluation outputs to analyze the performance of trained machine learning models.
+
+The generated results include:
+
+- Model accuracy comparison
+- Confusion matrices for each model
+- Classification performance analysis
+
+All generated evaluation files are stored inside the `outputs/` directory.
+
+### Output Structure
+outputs/
+├   
+│── Logistic_Regression_confusion_matrix.png
+│── Random_Forest_confusion_matrix.png
+│── SVM_confusion_matrix.png
+│
+├── model_comparison.csv
+
+#### Support Vector Machine (SVM)
+
+![SVM Confusion Matrix](outputs/SVM_confusion_matrix.png)
+
+#### Random Forest
+
+![Random Forest Confusion Matrix](outputs/Random_Forest_confusion_matrix.png)
+
+#### Logistic Regression
+
+![Logistic Regression Confusion Matrix](outputs/Logistic_Regression_confusion_matrix.png)
+---
+
+## 🚀 Future Improvements
+
+Although the current system achieves high accuracy, several improvements can be explored in future work:
+
+- Implement deep learning approaches such as Artificial Neural Networks (ANN), CNNs, or LSTMs for improved sequence learning.
+- Develop a real-time activity recognition system using live smartphone sensor data.
+- Deploy the model as a mobile application for practical usage.
+- Perform hyperparameter optimization to further improve model performance.
+- Reduce computational complexity for deployment on edge devices.
+- Extend the system to recognize additional human activities.
+
+---
+## 👥 Contributors
+
+| Member | Contribution |
+|---|---|
+| Amaan | Project setup, dataset handling and EDA |
+| Jai | Machine learning model development and training |
+| Atulya | Model evaluation and visualization |
+| Thanish | Prediction pipeline and documentation |
+
+## 📄 License
+
+This project is created for educational and academic purposes.
+
+You are free to use, modify, and improve this project for learning and research purposes.
+
+---
