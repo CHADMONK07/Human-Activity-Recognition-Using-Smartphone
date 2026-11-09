@@ -221,6 +221,13 @@ cd Human-Activity-Recognition-Using-Smartphone
 pip install -r requirements.txt
 ```
 
+### Download Dataset
+
+Run:
+
+```bash
+python src/download_data.py
+
 ---
 
 ## 🧹 Data Preprocessing
@@ -536,12 +543,12 @@ Although the current system achieves high accuracy, several improvements can be 
 ---
 ## 👥 Contributors
 
-| Member | Contribution |
-|---|---|
-| Amaan | Project setup, dataset handling and EDA |
-| Jai | Machine learning model development and training |
-| Atulya | Model evaluation and visualization |
-| Thanish | Prediction pipeline and documentation |
+| Name | GitHub Handle | Contribution |
+|---|---|---|
+| Amaan | CHADMONK07 | Project Lead, Prediction Pipeline, Integration |
+| Jai | 2026eeb1355-spec | Model Training Pipeline |
+| Atulya | Atulya-Sharma28 | Model Evaluation & Visualization |
+| Thanish | 2026aib1029-cyber | Prediction Pipeline & Documentation |
 
 ## 📄 License
 
@@ -550,3 +557,15 @@ This project is created for educational and academic purposes.
 You are free to use, modify, and improve this project for learning and research purposes.
 
 ---
+## AI Usage Disclosure
+
+AI tools were used during the project for:
+- Documentation improvement and README formatting
+- Assistance in preparing presentation content
+- Generating suggestions for code organization and debugging support
+
+Tools used:
+- ChatGPT
+- Claude
+
+All implementation decisions, model training, evaluation, and final code verification were performed by the team.

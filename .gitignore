@@ -9,9 +9,12 @@ env/
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Model files
+# Ignore all trained model files
 *.pkl
 *.h5
+
+# Keep final prediction model only
+!models/best_model.pkl
 
 # OS files
 .DS_Store

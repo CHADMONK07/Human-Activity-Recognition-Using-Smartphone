@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 from sklearn.metrics import (
     accuracy_score,
     classification_report,
@@ -10,6 +10,15 @@ from sklearn.metrics import (
 )
 
 from data_loader import load_data
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+MODELS_DIR = os.path.join(BASE_DIR, "models")
+
+OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
+
+os.makedirs(OUTPUTS_DIR, exist_ok=True)
+
 
 
 # Load data
@@ -22,16 +31,20 @@ x_train, x_test, y_train, y_test = load_data()
 models = {
 
     "Logistic Regression":
-        "models/logistic_regression_model.pkl",
+        os.path.join(MODELS_DIR, "logistic_regression_model.pkl"),
 
     "Random Forest":
-        "models/random_forest_model.pkl",
+        os.path.join(MODELS_DIR, "random_forest_model.pkl"),
 
     "SVM":
-        "models/svm_model.pkl"
+        os.path.join(MODELS_DIR, "svm_model.pkl")
 }
 
-
+for model_name, path in models.items():
+    if not os.path.exists(path):
+        raise FileNotFoundError(
+            f"{model_name} not found. Run train_model.py first."
+        )
 results = []
 
 
@@ -79,7 +92,8 @@ for model_name, path in models.items():
     sns.heatmap(
         cm,
         annot=True,
-        fmt="d"
+        fmt="d",
+        cmap="Blues"
     )
 
     plt.title(
@@ -90,8 +104,11 @@ for model_name, path in models.items():
     plt.ylabel("Actual")
 
     plt.savefig(
-        f"outputs/{model_name.replace(' ','_')}_confusion_matrix.png"
+    os.path.join(
+        OUTPUTS_DIR,
+        f"{model_name.replace(' ','_')}_confusion_matrix.png"
     )
+)
 
     plt.close()
 
@@ -111,6 +128,9 @@ print(results_df)
 
 
 results_df.to_csv(
-    "outputs/model_comparison.csv",
+    os.path.join(
+        OUTPUTS_DIR,
+        "model_comparison.csv"
+    ),
     index=False
 )

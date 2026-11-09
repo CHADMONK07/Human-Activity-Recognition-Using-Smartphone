@@ -9,12 +9,17 @@ DATA_PATH = os.path.join(
     "raw",
     "UCI HAR Dataset"
 )
-
+if not os.path.exists(DATA_PATH):
+    raise FileNotFoundError(
+        "Dataset not found.\n"
+        "Please run:\n"
+        "python src/download_data.py"
+    )
 
 def load_data():
 
     features = pd.read_csv(
-        DATA_PATH + "/features.txt",
+        os.path.join(DATA_PATH, "features.txt"),
         sep=r"\s+",
         header=None
     )
@@ -37,7 +42,7 @@ def load_data():
 
 
     x_train = pd.read_csv(
-        DATA_PATH + "/train/X_train.txt",
+        os.path.join(DATA_PATH, "train", "X_train.txt"),
         sep=r"\s+",
         header=None,
         names=feature_names
@@ -45,7 +50,7 @@ def load_data():
 
 
     x_test = pd.read_csv(
-        DATA_PATH + "/test/X_test.txt",
+        os.path.join(DATA_PATH, "test", "X_test.txt"),
         sep=r"\s+",
         header=None,
         names=feature_names
@@ -53,7 +58,7 @@ def load_data():
 
 
     y_train = pd.read_csv(
-        DATA_PATH + "/train/y_train.txt",
+       os.path.join(DATA_PATH, "train", "y_train.txt"),
         sep=r"\s+",
         header=None,
         names=["activity"]
@@ -61,7 +66,7 @@ def load_data():
 
 
     y_test = pd.read_csv(
-        DATA_PATH + "/test/y_test.txt",
+       os.path.join(DATA_PATH, "test", "y_test.txt"),
         sep=r"\s+",
         header=None,
         names=["activity"]
