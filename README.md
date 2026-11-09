@@ -432,16 +432,50 @@ The trained models are stored inside the `models/` directory.
 
 ## 📈 Model Performance Results
 
-After training and evaluating multiple machine learning algorithms, their performance was compared using accuracy scores.
+After training and evaluating multiple machine learning algorithms, their performance was compared using accuracy score, classification reports, and confusion matrices.
+
+The evaluation was performed on the test dataset using the same preprocessing pipeline for all models.
 
 ### Accuracy Comparison
 
-| Model | Accuracy |
-|-------|----------|
-| Logistic Regression | 96.06% |
-| Random Forest | 92.57% |
-| Support Vector Machine (SVM) | 96.40% |
+| Model | Algorithm Type | Accuracy |
+|-------|---------------|----------|
+| Logistic Regression | Linear Classification Model | 96.06% |
+| Random Forest | Ensemble Tree-Based Model | 92.57% |
+| Support Vector Machine (SVM) | Margin-Based Classification Model | 96.40% |
 
+### Performance Summary
+
+- **Support Vector Machine (SVM)** achieved the highest accuracy among all tested models.
+- **Logistic Regression** provided a strong baseline performance with competitive accuracy.
+- **Random Forest** handled high-dimensional sensor features effectively but achieved slightly lower accuracy compared to SVM.
+
+The complete model comparison results are saved in:
+
+```
+outputs/model_comparison.csv
+```
+## 📊 Model Evaluation Visualizations
+
+Confusion matrices were generated to analyze the classification performance of each trained machine learning model.
+
+### Logistic Regression
+
+![Logistic Regression Confusion Matrix](outputs/Logistic_Regression_confusion_matrix.png)
+
+### Random Forest
+
+![Random Forest Confusion Matrix](outputs/Random_Forest_confusion_matrix.png)
+
+### Support Vector Machine (SVM)
+
+![SVM Confusion Matrix](outputs/SVM_confusion_matrix.png)
+
+These visualizations provide insights into:
+
+- Correctly classified human activities
+- Misclassification patterns between activities
+- Model prediction behaviour across different classes
 ---
 
 ## 🏆 Best Performing Model
