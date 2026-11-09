@@ -57,6 +57,28 @@ This project uses the **UCI Human Activity Recognition Using Smartphones Dataset
 
 The dataset was created from experiments carried out using smartphone sensors to record human movement patterns. Data was collected from participants performing different daily activities while carrying a smartphone equipped with an accelerometer and gyroscope.
 
+### Dataset Setup
+
+The dataset is automatically downloaded and extracted using the provided script:
+
+```bash
+python src/download_data.py
+```
+
+The script creates the required folder structure:
+
+```
+data/
+└── raw/
+    └── UCI HAR Dataset/
+        ├── train/
+        ├── test/
+        ├── features.txt
+        └── activity_labels.txt
+```
+
+This ensures that the machine learning pipeline can directly access the required sensor data for training and evaluation.
+
 ### Dataset Information
 
 | Attribute | Description |
@@ -213,21 +235,75 @@ Follow the steps below to run this project locally.
 
 ### 1. Clone the Repository
 
+Clone the GitHub repository:
+
 ```bash
 git clone https://github.com/CHADMONK07/Human-Activity-Recognition-Using-Smartphone.git
 
 cd Human-Activity-Recognition-Using-Smartphone
+```
 
+### 2. Create Virtual Environment
+
+Create a Python virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+Install the required Python libraries:
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Download Dataset
+### 4. Download Dataset
 
-Run:
+Download and prepare the UCI Human Activity Recognition dataset:
 
 ```bash
 python src/download_data.py
+```
 
+### 5. Train Machine Learning Models
+
+Train all classification models:
+
+```bash
+python src/train_model.py
+```
+
+### 6. Evaluate Models
+
+Generate model performance reports and confusion matrices:
+
+```bash
+python src/evaluate_model.py
+```
+
+### 7. Run Prediction
+
+Run the activity prediction pipeline:
+
+```bash
+python src/predict.py
+```
 ---
 
 ## 🧹 Data Preprocessing
