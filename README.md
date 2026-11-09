@@ -307,7 +307,7 @@ python src/train_model.py
 **Expected Output**
 
 <p align="center">
-  <img src="images/train model output.png" alt="Training Output" width="900">
+  <img src="images/download data actual output.png" alt="Training Output" width="900">
 </p>
 
 ---
