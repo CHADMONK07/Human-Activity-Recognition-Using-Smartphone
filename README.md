@@ -143,9 +143,6 @@ Data Loading
 Data Preprocessing
           |
           ↓
-Feature Processing
-          |
-          ↓
 Model Training
           |
           ↓
