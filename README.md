@@ -11,6 +11,15 @@ A Machine Learning based system that recognizes human activities using smartphon
 </p>
 
 ---
+## 👥 TEAM 19 AND ROLE 
+
+| Name | GitHub Handle | Contribution |
+|---|---|---|
+| Amaan | CHADMONK07 | Project Lead, Prediction Pipeline, Integration |
+| Jai | 2026eeb1355-spec | Model Training Pipeline |
+| Atulya | Atulya-Sharma28 | Model Evaluation & Visualization |
+| Thanish | 2026aib1029-cyber | Prediction Pipeline & Documentation |
+---
 
 ## 🚀 Project Overview
 
@@ -265,7 +274,7 @@ source venv/bin/activate
 
 ### 3. Install Dependencies
 
-Install the required Python libraries:
+Install all the required Python libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -273,35 +282,71 @@ pip install -r requirements.txt
 
 ### 4. Download Dataset
 
-Download and prepare the UCI Human Activity Recognition dataset:
+Download and extract the UCI Human Activity Recognition dataset:
 
 ```bash
 python src/download_data.py
 ```
 
+**Expected Output**
+
+<p align="center">
+  <img src="images/download_output.png" alt="Download Dataset Output" width="900">
+</p>
+
+---
+
 ### 5. Train Machine Learning Models
 
-Train all classification models:
+Train all machine learning models:
 
 ```bash
 python src/train_model.py
 ```
 
+**Expected Output**
+
+<p align="center">
+  <img src="images/train_model_output.png" alt="Training Output" width="900">
+</p>
+
+---
+
 ### 6. Evaluate Models
 
-Generate model performance reports and confusion matrices:
+Evaluate the trained models and generate performance metrics:
 
 ```bash
 python src/evaluate_model.py
 ```
 
+**Classification Report**
+
+<p align="center">
+  <img src="images/evaluate_output_1.png" alt="Evaluation Output 1" width="900">
+</p>
+
+**Model Comparison & Evaluation**
+
+<p align="center">
+  <img src="images/evaluate_output_2.png" alt="Evaluation Output 2" width="900">
+</p>
+
+---
+
 ### 7. Run Prediction
 
-Run the activity prediction pipeline:
+Run the prediction pipeline using the saved best-performing model:
 
 ```bash
 python src/predict.py
 ```
+
+**Expected Output**
+
+<p align="center">
+  <img src="images/predict_output.png" alt="Prediction Output" width="900">
+</p>
 ---
 
 ## 🧹 Data Preprocessing
@@ -593,14 +638,7 @@ Although the current system achieves high accuracy, several improvements can be 
 - Extend the system to recognize additional human activities.
 
 ---
-## 👥 Contributors
 
-| Name | GitHub Handle | Contribution |
-|---|---|---|
-| Amaan | CHADMONK07 | Project Lead, Prediction Pipeline, Integration |
-| Jai | 2026eeb1355-spec | Model Training Pipeline |
-| Atulya | Atulya-Sharma28 | Model Evaluation & Visualization |
-| Thanish | 2026aib1029-cyber | Prediction Pipeline & Documentation |
 
 ## 📄 License
 
