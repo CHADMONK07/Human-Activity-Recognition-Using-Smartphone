@@ -472,6 +472,12 @@ Confusion matrices were generated to analyze the classification performance of e
 
 ![SVM Confusion Matrix](outputs/SVM_confusion_matrix.png)
 
+### Model Accuracy Comparison
+
+The accuracy comparison plot shows the performance difference between the trained machine learning models.
+
+![Model Accuracy Comparison](outputs/model_accuracy_comparison.png)
+
 These visualizations provide insights into:
 
 - Correctly classified human activities

@@ -134,3 +134,39 @@ results_df.to_csv(
     ),
     index=False
 )
+# Accuracy comparison plot
+
+plt.figure(figsize=(8,5))
+
+sns.barplot(
+    data=results_df,
+    x="Model",
+    y="Accuracy"
+)
+
+plt.title(
+    "Model Accuracy Comparison"
+)
+
+plt.xlabel(
+    "Machine Learning Model"
+)
+
+plt.ylabel(
+    "Accuracy"
+)
+
+plt.ylim(0,1)
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+
+plt.savefig(
+    os.path.join(
+        OUTPUTS_DIR,
+        "model_accuracy_comparison.png"
+    )
+)
+
+plt.close()
