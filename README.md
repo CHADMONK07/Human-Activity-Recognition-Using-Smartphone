@@ -153,6 +153,7 @@ Model Evaluation
           |
           ↓
 Human Activity Prediction
+```
 ---
 
 ## 🏗️ Machine Learning Pipeline
@@ -574,69 +575,7 @@ python src/predict.py
 
 ---
 
-## ▶️ How to Run the Project
 
-Follow these steps to execute the complete machine learning pipeline.
-
-### Step 1: Activate Environment
-
-```bash
-venv\Scripts\activate
-```
-
-### Step 2: Train Models
-
-```bash
-python src/train_model.py
-```
-
-### Step 3: Evaluate Models
-
-```bash
-python src/evaluate_model.py
-```
-
-### Step 4: Predict Activity
-
-```bash
-python src/predict.py
-```
----
-
----
-
-## 📸 Results Visualization
-
-The project generates different evaluation outputs to analyze the performance of trained machine learning models.
-
-The generated results include:
-
-- Model accuracy comparison
-- Confusion matrices for each model
-- Classification performance analysis
-
-All generated evaluation files are stored inside the `outputs/` directory.
-
-### Output Structure
-outputs/
-├   
-│── Logistic_Regression_confusion_matrix.png
-│── Random_Forest_confusion_matrix.png
-│── SVM_confusion_matrix.png
-│
-├── model_comparison.csv
-
-#### Support Vector Machine (SVM)
-
-![SVM Confusion Matrix](outputs/SVM_confusion_matrix.png)
-
-#### Random Forest
-
-![Random Forest Confusion Matrix](outputs/Random_Forest_confusion_matrix.png)
-
-#### Logistic Regression
-
-![Logistic Regression Confusion Matrix](outputs/Logistic_Regression_confusion_matrix.png)
 ---
 
 ## 🚀 Future Improvements
