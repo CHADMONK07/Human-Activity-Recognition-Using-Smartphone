@@ -291,7 +291,7 @@ python src/download_data.py
 **Expected Output**
 
 <p align="center">
-  <img src="images/download_output.png" alt="Download Dataset Output" width="900">
+  <img src="images/download output.png" alt="Download Dataset Output" width="900">
 </p>
 
 ---
@@ -307,7 +307,7 @@ python src/train_model.py
 **Expected Output**
 
 <p align="center">
-  <img src="images/train_model_output.png" alt="Training Output" width="900">
+  <img src="images/train model output.png" alt="Training Output" width="900">
 </p>
 
 ---
@@ -323,13 +323,13 @@ python src/evaluate_model.py
 **Classification Report**
 
 <p align="center">
-  <img src="images/evaluate_output_1.png" alt="Evaluation Output 1" width="900">
+  <img src="images/evaluate 1.png" alt="Evaluation Output 1" width="900">
 </p>
 
 **Model Comparison & Evaluation**
 
 <p align="center">
-  <img src="images/evaluate_output_2.png" alt="Evaluation Output 2" width="900">
+  <img src="images/evaluate 2.png" alt="Evaluation Output 2" width="900">
 </p>
 
 ---
@@ -345,7 +345,7 @@ python src/predict.py
 **Expected Output**
 
 <p align="center">
-  <img src="images/predict_output.png" alt="Prediction Output" width="900">
+  <img src="images/predict output.png" alt="Prediction Output" width="900">
 </p>
 ---
 
