@@ -37,7 +37,7 @@ The complete project demonstration can be viewed through the following videos:
 
 The project presentation slides can be accessed below:
 
-[Download Project PPT](presentation/HAR_Project_GitHub final.pdf)
+[Download Project PPT](presentation/HAR_Project_GitHub.pdf)
 ---
 
 ## 🚀 Project Overview
