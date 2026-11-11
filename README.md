@@ -11,7 +11,7 @@ A Machine Learning based system that recognizes human activities using smartphon
 </p>
 
 ---
-## 👥 TEAM 19 AND ROLE 
+## 👥 TEAM 19 ROLE , PPT AND VIDEO LINKS 
 
 | Name | GitHub Handle | Contribution |
 |---|---|---|
@@ -19,6 +19,25 @@ A Machine Learning based system that recognizes human activities using smartphon
 | Jai | 2026eeb1355-spec | Model Training Pipeline |
 | Atulya | Atulya-Sharma28 | Model Evaluation & Visualization |
 | Thanish | 2026aib1029-cyber | Prediction Pipeline & Documentation |
+
+## 🎥 Project Demo Video
+
+The complete project demonstration can be viewed through the following videos:
+
+### Video 1: Complete Project Installation,Member Introduction And Contribution
+
+[Watch Video 1](https://youtu.be/469n0J2X-Is)
+
+
+### Video 2: Project Explanation and Code Walkthrough
+
+[Watch Video 2](https://youtu.be/BvkJuBUtOEY)
+
+## 📊 Project Presentation
+
+The project presentation slides can be accessed below:
+
+[Download Project PPT](presentation/HAR_Project_GitHub final.pdf)
 ---
 
 ## 🚀 Project Overview
@@ -256,6 +275,7 @@ Create a Python virtual environment:
 
 ```bash
 python -m venv venv
+##for mac use python3 -m venv venv
 ```
 
 Activate the virtual environment:
